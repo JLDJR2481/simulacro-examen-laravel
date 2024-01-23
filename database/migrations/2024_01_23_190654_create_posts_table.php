@@ -12,9 +12,9 @@ return new class extends Migration {
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string("titulo");
-            $table->string("extracto");
-            $table->text("contenido");
+            $table->string("titulo")->nullable(false);
+            $table->string("extracto")->nullable(false);
+            $table->text("contenido")->nullable(false);
             $table->boolean("caducable")->default(false);
             $table->boolean("comentable")->default(true);
             $table->enum("acceso", ["privado", "publico"])->default("publico");
