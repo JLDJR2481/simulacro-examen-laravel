@@ -14,10 +14,10 @@ return new class extends Migration {
             $table->id();
             $table->string("titulo");
             $table->string("extracto");
-            $table->string("contenido");
+            $table->text("contenido");
             $table->boolean("caducable")->default(false);
-            $table->boolean("comentable")->default(false);
-            $table->string("acceso");
+            $table->boolean("comentable")->default(true);
+            $table->enum("acceso", ["privado", "publico"])->default("publico");
             $table->dateTime("creacion");
             $table->bigInteger("user_id");
             $table->foreign("user_id")->references("id")->on("users");
