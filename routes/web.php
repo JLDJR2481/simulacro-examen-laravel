@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ApiPostController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,9 +20,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/create', function () {
-    return view('posts.create');
-});
+// Route::get('/create', function () {
+//     return view('posts.create');
+// })->name("create");
+
+Route::resource("/posts", PostController::class)->except('update', 'destroy');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
