@@ -12,6 +12,8 @@ return [
     'access' => 'Acceso',
     'send' => 'Enviar',
     'private' => 'Privado',
-    'public' => 'Público'
+    'public' => 'Público',
+    'list' => 'Lista de Posts',
+    'create' => 'Crear Post'
 
 ];

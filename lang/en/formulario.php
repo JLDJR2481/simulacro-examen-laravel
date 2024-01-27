@@ -12,5 +12,7 @@ return [
     'access' => 'Access',
     'send' => 'Send',
     'private' => 'Private',
-    'public' => 'Public'
+    'public' => 'Public',
+    'list' => 'List of Posts',
+    'create' => 'Create Post'
 ];
