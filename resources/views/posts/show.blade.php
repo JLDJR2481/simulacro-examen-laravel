@@ -3,6 +3,9 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class='card'>
+                    <div class="card-header" style="font-weight:bold; text-align:center;">@lang("formulario.details")
+                    </div>
+
                     <div class="card-body">
                         <h1 class="card-title">@lang("formulario.title"): {{$post->titulo}}</h1>
                         <p class="card-text">@lang("formulario.extract"): {{$post->extracto}}</p>
