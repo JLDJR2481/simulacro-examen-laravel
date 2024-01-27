@@ -32,7 +32,7 @@ class PostSeeder extends Seeder
             'caducable' => false,
             'comentable' => true,
             'acceso' => 'publico',
-            'user_id' => 1,
+            'user_id' => 2,
         ]);
     }
 }

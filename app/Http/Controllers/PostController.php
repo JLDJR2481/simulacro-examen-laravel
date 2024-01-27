@@ -7,6 +7,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use Auth;
 use App\Models\Post;
+use Illuminate\Support\Facades\Gate;
 
 
 class PostController extends Controller
@@ -18,7 +19,11 @@ class PostController extends Controller
     {
         $posts = Post::all();
 
-        return view('posts.index', ['posts' => $posts]);
+        $filteredPosts = $posts->filter(function ($post) {
+            return Gate::allows('view-posts', $post);
+        });
+
+        return view('posts.index', ['posts' => $filteredPosts]);
     }
 
     /**
@@ -35,8 +40,6 @@ class PostController extends Controller
     public function store(PostRequest $request): RedirectResponse
     {
         $data = $request->all();
-
-        $request->validated();
 
         $data['caducable'] = isset($data['caducable']);
         $data['comentable'] = isset($data['comentable']);
