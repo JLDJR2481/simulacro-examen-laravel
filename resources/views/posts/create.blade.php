@@ -69,10 +69,10 @@
                 @enderror
             </div>
             <div class="form-group">
-                <label for="content" class="h4">@lang("formulario.content")</label><br>
-                <textarea rows="5" name="content" class="form-control-lg w-100 mb-3"
-                    required>{{ old('content') }}</textarea>
-                @error("content")
+                <label for="contenido" class="h4">@lang("formulario.content")</label><br>
+                <textarea rows="5" name="contenido" class="form-control-lg w-100 mb-3"
+                    required>{{ old('contenido') }}</textarea>
+                @error("contenido")
                 <p style="color: red">{{$message}}</p>
                 @enderror
             </div>
