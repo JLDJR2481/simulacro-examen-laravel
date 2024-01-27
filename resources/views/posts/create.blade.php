@@ -49,7 +49,7 @@
     </ul>
     @endif
     <div class="container" id="main">
-        <form action="" method="POST">
+        <form action="{{route('posts.store')}}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="titulo" class="h4">@php
@@ -62,16 +62,16 @@
             </div>
             <div class="form-group">
                 <label for="extracto" class="h4">@lang('formulario.extract')</label><br>
-                <textarea rows="3" name="extracto" class="form-control-lg w-100 mb-3" required
-                    value="{{ old('extracto') }}"></textarea>
+                <textarea rows="3" name="extracto" class="form-control-lg w-100 mb-3"
+                    required>{{ old('extracto') }}</textarea>
                 @error('extracto')
                 <p style="color: red">{{$message}}</p>
                 @enderror
             </div>
             <div class="form-group">
                 <label for="content" class="h4">@lang("formulario.content")</label><br>
-                <textarea rows="5" name="content" class="form-control-lg w-100 mb-3" required
-                    value="{{ old('content') }}"></textarea>
+                <textarea rows="5" name="content" class="form-control-lg w-100 mb-3"
+                    required>{{ old('content') }}</textarea>
                 @error("content")
                 <p style="color: red">{{$message}}</p>
                 @enderror
