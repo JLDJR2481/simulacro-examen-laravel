@@ -14,6 +14,6 @@ return [
     'private' => 'Privado',
     'public' => 'Público',
     'list' => 'Lista de Posts',
-    'create' => 'Crear Post'
-
+    'create' => 'Crear Post',
+    'details' => "Detalles del post"
 ];
