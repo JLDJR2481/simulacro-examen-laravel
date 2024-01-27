@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Auth;
 use App\Models\Post;
@@ -54,5 +53,10 @@ class PostController extends Controller
     public function show(Post $post): View
     {
         return view('posts.show', compact('post'));
+    }
+
+    public function edit(Post $post): View
+    {
+        return view('posts.edit', compact('post'));
     }
 }
